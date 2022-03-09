@@ -1,0 +1,345 @@
+
+/* ===================Custom Property=========================== */
+
+
+:root{
+
+    /* ==========Color=============== */
+    
+    /* pallete-1 */
+    --first-color-1: #42C2FF;
+    --second-color-1: #85F4FF;
+
+    --backgrund-color-1: #EFFFFD;
+
+    /* pallete-2*/
+    --first-color-2: #533E85;
+    --second-color-2: #488FB1;
+
+    /* pallete-3 */
+
+    --first-color-3: #051367;
+    --second-color-3: #5D8BF4; 
+
+    /* ========== */
+
+    --header-height: 3rem;
+    --botton-menu: 3rem;
+
+}
+
+/* Reseteo */
+
+html{
+    box-sizing: border-box;
+    font-family: var(--font);
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+    color: var(--text-color);
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/* ===================Components================================ */
+
+
+
+
+.nav-bar-menu{
+    position: fixed;
+    right: 0;
+    bottom: var(--botton-menu);
+    background-color: var(--second-color-2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: thin solid white;
+    padding: 0.5rem;
+    margin-right: 1rem;
+    border-radius: 1rem;
+    transition: all 1s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.nav-bar-menu>a:hover{
+    color: white;
+}
+
+/* ===================Utilities================================= */
+
+
+.card-notice{
+    width: 100%;
+    height: 450px;
+    background-color: transparent;
+    border-top: thin solid var(--second-color-2);
+    border-bottom: thin solid var(--second-color-2);
+    margin-top: 1rem;
+    background-color: aliceblue;
+}
+
+.card-notice img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.circle-user{
+    width: 25px;
+    height: 25px;
+}
+
+.header-card{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: thin solid var(--second-color-2);
+}
+
+.header-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.header-card h3{
+    font-size: 15px;
+}
+
+
+.header{
+    position: sticky;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: var(--header-height);
+    background-color: var(--first-color-3);
+    padding: 0.5rem 1rem;
+    box-shadow: 1px 1px 3px black;
+    z-index: 999;
+}
+
+.is-active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal{
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 900;
+    background-color: rgba(29, 29, 31, 0.616);
+    transition: all 1s;
+    opacity: 0;
+}
+
+.modal-none{
+    opacity: 1;
+}
+
+.none{
+    display: none;
+}
+
+
+ /* ===================MyPlanet================================ */
+
+
+.container-menu-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background-color: var(--second-color-2);
+    border: thin solid white;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 4rem;
+    cursor: pointer;
+}
+
+.circle-user img{
+    border: thin solid red;
+}
+
+.description-card{
+    padding-left: .5rem;
+}
+
+.footer-card-container{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-card-container .title-card{
+    grid-column: span 2;
+}
+.footer-card-container .description-card{
+    grid-column: span 3;
+}
+
+.title-card{
+    height: 30px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.title-card > h4{
+    text-align: center;
+}
+
+.description-card{
+    height: 50px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-top: thin solid var(--first-color-2);
+}
+
+.reaction-card>a{
+    display: block;
+}
+
+.reaction-card{
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.img-container{
+    width: 100%;
+    height: 300px;
+}
+
+.header-card{
+    padding-left: .5rem;
+}
+
+
+.header>i,
+.header>h2{
+    color: var(--second-color-1);
+}
+
+
+.nav-bar-menu a{
+    color: black;
+}
+.nav-bar-menu a{
+    text-decoration: none;
+}
+
+
+.nav-bar-item{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1rem 1rem;
+    margin-bottom: 2rem;
+    margin-right: 1.5rem;
+}
+
+.nav-bar-item:nth-child(1){
+    margin-top: 2rem;
+}
+
+.reaction-card{
+    position: relative;
+    padding-left: .5rem;
+    gap: 0.3rem;
+}
+
+
+.reaction-like{
+    position: absolute;
+    background-color: var(--first-color-3);
+    color: white;
+    border: thin solid var(--second-color-2);
+    border-radius: 3rem;
+    top: -2rem;
+    left: 2rem;
+    transition: all 0.5s;
+    opacity: 0;
+}
+
+.enlace-reaction:hover ~ .reaction-like{
+    opacity: 1;
+}
+
+
+/* ====================Media QUERY============================= */
+
+
+
+@media screen and (min-width: 500px) {
+    .main-container-section{
+        margin: auto auto;
+        max-width: 500px;
+    }
+   
+}
+
+@media screen and (min-width: 900px) {
+    
+    .nav-bar-menu>a:hover{
+        color: white;
+    }
+
+    .header{
+        position: sticky;
+    }
+
+    .nav-bar-menu{
+        opacity: 1;
+        top: var(--header-height);
+        bottom: 0;
+        right: 0;
+        margin-right: 0;
+        border-radius: 0;
+        border-color: transparent;
+    }
+
+    .container-menu-icon{
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
